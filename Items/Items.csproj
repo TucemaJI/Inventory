@@ -42,7 +42,7 @@
   <ItemGroup>
     <Compile Include="BottleHP.cs" />
     <Compile Include="BottleMP.cs" />
-    <Compile Include="Bottles.cs" />
+    <Compile Include="Bottle.cs" />
     <Compile Include="BottleST.cs" />
     <Compile Include="Item.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -10,6 +10,6 @@ namespace Items
     {
         protected new float Weight = 0.1f;
 
-        protected abstract short Restore(short element);
+        internal abstract short Restore(short element);
     }
 }

@@ -8,10 +8,10 @@ namespace Player
 {
     public class Player
     {
-        private string Name { get; set; }
+        internal string Name { get; set; }
 
-        protected short hp = 300;
-        protected short mp = 600;
-        protected short stamina = 700;
+        internal short hp = 300;
+        internal short mp = 600;
+        internal short stamina = 700;
     }
 }

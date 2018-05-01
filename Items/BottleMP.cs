@@ -8,9 +8,9 @@ namespace Items
 {
     class BottleMP : Bottle
     {
-        protected new string Name = "MP bottle";
+        internal readonly new string Name = "MP bottle";
 
-        protected override short Restore(short mp)
+        internal override short Restore(short mp)
         {
             return mp += 30;
         }

@@ -8,9 +8,9 @@ namespace Items
 {
     public abstract class Item
     {
-        public string Name { get; set; }
+        protected string Name { get; set; }
 
-        public float Weight { get; set; }
+        protected float Weight { get; set; }
 
         
     }
