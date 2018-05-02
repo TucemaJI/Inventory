@@ -13,5 +13,7 @@ namespace Inventory
         internal short hp = 300;
         internal short mp = 600;
         internal short stamina = 700;
+
+        Inventory inventory = new Inventory();
     }
 }

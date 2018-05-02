@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Inventory
 {
-    class BottleHP : Bottle
+    internal class BottleHP : Bottle
     {
         internal readonly new string Name = "HP bottle";
 
