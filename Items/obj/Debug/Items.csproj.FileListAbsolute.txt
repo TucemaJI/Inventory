@@ -1,0 +1,11 @@
+D:\Prog\Items\bin\Debug\Items.dll
+D:\Prog\Items\bin\Debug\Items.pdb
+D:\Prog\Items\obj\Debug\Items.csprojResolveAssemblyReference.cache
+D:\Prog\Items\obj\Debug\Items.csproj.CoreCompileInputs.cache
+D:\Prog\Items\obj\Debug\Items.dll
+D:\Prog\Items\obj\Debug\Items.pdb
+D:\WAKAPM\Prog\Items\bin\Debug\Items.dll
+D:\WAKAPM\Prog\Items\bin\Debug\Items.pdb
+D:\WAKAPM\Prog\Items\obj\Debug\Items.csprojResolveAssemblyReference.cache
+D:\WAKAPM\Prog\Items\obj\Debug\Items.dll
+D:\WAKAPM\Prog\Items\obj\Debug\Items.pdb

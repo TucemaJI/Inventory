@@ -8,12 +8,28 @@ namespace Inventory
 {
     public class Player
     {
-        internal string Name { get; set; }
+        public string Name { get; set; }
 
-        internal short hp = 300;
-        internal short mp = 600;
-        internal short stamina = 700;
+        public short hp = 300;
+        public short mp = 600;
+        public short stamina = 700;
 
-        Inventory inventory = new Inventory();
+        public Inventory inventory = new Inventory();
+
+        public void IntoInventory(Item item)
+        {
+            inventory.IntoInventory(item);
+        }
+
+        public int CapacityInventory()
+        {
+            return inventory.inventory.Capacity;
+        }
+
+        //public List<Item> ContentInventory (string bottle)
+        //{
+
+        //}
+
     }
 }

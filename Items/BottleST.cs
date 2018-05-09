@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Inventory
 {
-    internal class BottleST : Bottle
+    public class BottleST : Bottle
     {
-        internal readonly new string Name = "Stamina bottle";
+        public readonly new string Name = "Stamina bottle";
 
-        internal override short Restore(short stamina)
+        public override short Restore(short stamina)
         {
             return stamina += 30;
         }

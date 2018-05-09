@@ -48,6 +48,10 @@
       <Project>{3e23ce30-1290-436c-ade6-fed0a7fef826}</Project>
       <Name>Inventory</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Items\Items.csproj">
+      <Project>{3c6044c7-37d8-4566-b312-bc71f7c243cd}</Project>
+      <Name>Items</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace Inventory
 {
-    abstract class Bottle : Item
+    public abstract class Bottle : Item
     {
-        protected new float Weight = 0.1f;
+        public new float Weight = 0.1f;
 
-        internal abstract short Restore(short element);
+        public abstract short Restore(short element);
+
+
     }
 }
