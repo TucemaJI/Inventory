@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{059C2F0C-900E-431F-9A6D-E52F24080513}</ProjectGuid>
+    <ProjectGuid>{3E23CE30-1290-436C-ADE6-FED0A7FEF826}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Player</RootNamespace>
-    <AssemblyName>Player</AssemblyName>
+    <RootNamespace>Inventory</RootNamespace>
+    <AssemblyName>Inventory</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,14 +40,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Player.cs" />
+    <Compile Include="Inventory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Inventory\Inventory.csproj">
-      <Project>{3e23ce30-1290-436c-ade6-fed0a7fef826}</Project>
-      <Name>Inventory</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Items\Items.csproj">
       <Project>{3c6044c7-37d8-4566-b312-bc71f7c243cd}</Project>
       <Name>Items</Name>
