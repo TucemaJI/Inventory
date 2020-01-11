@@ -1,17 +1,17 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Inventory
 {
-    public class Inventory:IEnumerable<Item>
+    public class Inventory : IEnumerable<Item>
     {
-        public byte maxWeight = 100;
+        public const byte _maxWeight = 100;
+        public const byte _capacityInventory = 10;
+        private float CurrentWeight { get; set; } = 0;
 
-        public List<Item> inventory = new List<Item>();
+
+
+        private List<Item> inventory = new List<Item>();
 
         public IEnumerator<Item> GetEnumerator()
         {
@@ -20,8 +20,9 @@ namespace Inventory
 
         public void IntoInventory(Item item)
         {
-            if (inventory.Capacity <= 10)
+            if (inventory.Count < _capacityInventory && _maxWeight >= CurrentWeight)
             {
+                CurrentWeight += item.Weight;
                 inventory.Add(item);
             }
         }
@@ -35,45 +36,22 @@ namespace Inventory
         {
             switch (key)
             {
-                case 1:
-                    var bottleHP = new BottleHP();
-                    return bottleHP;
-                case 2:
-                    var bottleMP = new BottleMP();
-                    return bottleMP;
-                case 3:
-                    var bottleST = new BottleST();
-                    return bottleST;
+                case 1: return new BottleHP();
+                case 2: return new BottleMP();
+                case 3: return new BottleST();
+                default: return new BottleHP();
             }
-            var bottle = new BottleHP();
-            return bottle;
         }
 
-        enum Bottles:byte
+        public bool UseItem(byte key)
         {
-            bottleHP = 1,
-            bottleMP = 2,
-            bottleST = 3
+            switch (key)
+            {
+                case 1: return inventory.Remove(inventory.Find(x => x.Name == "HP Bottle"));
+                case 2: return inventory.Remove(inventory.Find(x => x.Name == "MP Bottle"));
+                case 3: return inventory.Remove(inventory.Find(x => x.Name == "Stamina bottle"));
+                default: return false;
+            }
         }
-
-
-
-        //public Item UseBottleHP()
-        //{
-        //    foreach(var hpBottle in inventory)
-        //    {
-        //        if (hpBottle is BottleHP)
-        //        {
-        //            return hpBottle;
-        //        }
-        //        else
-        //        {
-
-        //        }
-        //    }
-        //}
-
-
-
     }
 }

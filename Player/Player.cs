@@ -1,35 +1,38 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Inventory
+﻿namespace Inventory
 {
     public class Player
     {
         public string Name { get; set; }
 
-        public short hp = 300;
-        public short mp = 600;
-        public short stamina = 700;
+        public short HP { get; set; } = 300;
+        public short MP { get; set; } = 600;
+        public short Stamina { get; set; } = 700;
 
         public Inventory inventory = new Inventory();
 
-        public void IntoInventory(Item item)
+        public void Restore(byte key)
         {
-            inventory.IntoInventory(item);
+            switch (key)
+            {
+                case 1:
+                    if (inventory.UseItem(key))
+                    {
+                        HP += 30;
+                    }
+                    break;
+                case 2:
+                    if (inventory.UseItem(key))
+                    {
+                        MP += 30;
+                    }
+                    break;
+                case 3:
+                    if (inventory.UseItem(key))
+                    {
+                        Stamina += 30;
+                    }
+                    break;
+            }
         }
-
-        public int CapacityInventory()
-        {
-            return inventory.inventory.Capacity;
-        }
-
-        //public List<Item> ContentInventory (string bottle)
-        //{
-
-        //}
-
     }
 }
